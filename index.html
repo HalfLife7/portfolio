@@ -28,7 +28,7 @@
           <v-container fluid fill-height py-0>
             <v-row no-gutters>
               <v-col cols="12">
-                <div style="height: 10vh;">
+                <div style="height: 2.5vh;">
                 </div>
                 <v-parallax src="images/backgrounds/background1.jpg" id="parallax">
                   <v-row class="d-flex align-center justify-center">
@@ -37,12 +37,12 @@
                         <v-card-title class="justify-center">
                           <div class="title font-weight-bold">Hi, I'm David!</div>
                         </v-card-title>
-                        <v-btn small @click="$vuetify.goTo('#skills', 'easeInQuad')">See More</v-btn>
+                        <v-btn dark small @click="$vuetify.goTo('#skills', 'easeInQuad')">See More</v-btn>
                       </v-card>
                     </v-col>
                   </v-row>
                 </v-parallax>
-                <div style="height: 10vh;">
+                <div style="height: 2.5vh;">
                 </div>
 
               </v-col>
@@ -53,7 +53,7 @@
 
             <v-row class="justify-center no-gutters">
               <v-col class="col-md-10 col-lg-8 text-center my-5">
-                <v-card>
+                <v-card dark>
                   <v-card-title primary-title class="layout justify-center">
                     <div>
                       <h3 id="about" class="display-1 font-weight-bold mb-0">About</h3>
@@ -141,7 +141,7 @@
         <v-container id="projects" py-5 my-5>
           <v-row class="justify-center">
             <v-col class="col-md-10 col-lg-8 text-center my-5">
-              <v-card>
+              <v-card dark>
                 <v-card-title primary-title class="layout justify-center">
                   <div>
                     <h3 id="about" class="display-1 font-weight-bold mb-0">Projects</h3>
@@ -181,7 +181,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script>
-    document.getElementById('parallax').style.height = '80vh'
+    document.getElementById('parallax').style.height = '95vh'
 
     Vue.component('skill-card', {
       props: ['skill'],
