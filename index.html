@@ -48,7 +48,7 @@
               </v-col>
             </v-row>
           </v-container>
-          <v-container id="skills" py-5 my-5>
+          <v-container id="skills">
             <!--about / skills-->
 
             <v-row class="justify-center no-gutters">
@@ -64,7 +64,7 @@
                       design – whether
                       it’s
                       architecture, urban planning or game design.</p>
-                    <p class="body-1">Always looking to learn new technologies, explore novel ideas and solve
+                    <p class="body-1">Always looking to learn new technologies and solve
                       challenging problems.</p>
                   </v-card-text>
                 </v-card>
@@ -74,7 +74,7 @@
                   <v-card>
                     <v-card-title primary-title class="layout justify-center">
                       <div>
-                        <h3 class="headline mb-0">Languages</h3>
+                        <h3 class="headline mb-0">Programming Languages</h3>
                       </div>
                     </v-card-title>
                     <v-row class="justify-center">
@@ -88,11 +88,11 @@
                   <v-card>
                     <v-card-title primary-title class="layout justify-center">
                       <div>
-                        <h3 class="headline mb-0">Javascript</h3>
+                        <h3 class="headline mb-0">Web Technologies</h3>
                       </div>
                     </v-card-title>
                     <v-row class="justify-center">
-                      <skill-card v-for="skill in javascript" v-bind:key="skill.id" v-bind:skill="skill">
+                      <skill-card v-for="skill in webTechnology" v-bind:key="skill.id" v-bind:skill="skill">
                       </skill-card>
                     </v-row>
                     </v-card-text>
@@ -116,7 +116,7 @@
                   <v-card>
                     <v-card-title primary-title class="layout justify-center">
                       <div>
-                        <h3 class="headline mb-0">Mobile</h3>
+                        <h3 class="headline mb-0">Mobile Development</h3>
                       </div>
                     </v-card-title>
                     <v-row class="justify-center">
@@ -131,7 +131,7 @@
           </v-container>
         </v-container>
         <v-parallax src="images/backgrounds/background1.jpg" id="parallax" height="300">
-          <v-row class="align-center justify-center">
+          <v-row class="justify-center">
             <v-col class="text-center">
               <v-icon @click="$vuetify.goTo('#projects', 'easeInQuad')" size="24px">fa-chevron-circle-down</v-icon>
             </v-col>
@@ -289,44 +289,64 @@
             "type": "language",
             "name": "PHP",
             "image": "images/skills/php.png"
-          }, {
+          },
+          {
             "id": "5",
             "type": "language",
+            "name": "Javascript",
+            "image": "images/skills/javascript.png"
+          }
+        ],
+        webTechnology: [{
+            "id": "1",
+            "type": "webTechnology",
+            "name": "jQuery",
+            "image": "images/skills/jquery.png"
+          }, {
+            "id": "2",
+            "type": "webTechnology",
+            "name": "React",
+            "image": "images/skills/react.png"
+          }, {
+            "id": "3",
+            "type": "webTechnology",
+            "name": "Vue.js",
+            "image": "images/skills/vue.png"
+          }, {
+            "id": "4",
+            "type": "webTechnology",
+            "name": "Node.js",
+            "image": "images/skills/node.png"
+          }, {
+            "id": "5",
+            "type": "webTechnology",
             "name": "HTML5",
             "image": "images/skills/html5.png"
           }, {
             "id": "6",
-            "type": "language",
+            "type": "webTechnology",
             "name": "CSS3",
             "image": "images/skills/css3.png"
+          },
+          {
+            "id": "7",
+            "type": "webTechnology",
+            "name": "Socket.io",
+            "image": "images/skills/socketio.png"
+          },
+          {
+            "id": "8",
+            "type": "webTechnology",
+            "name": "Stripe",
+            "image": "images/skills/stripe.png"
+          },
+          {
+            "id": "9",
+            "type": "webTechnology",
+            "name": "Selenium",
+            "image": "images/skills/selenium.png"
           }
         ],
-        javascript: [{
-          //   "id": "1",
-          //   "type": "javascript",
-          //   "name": "Javascript",
-          //   "image": "images/skills/javascript.png"
-          // }, {
-          "id": "2",
-          "type": "javascript",
-          "name": "jQuery",
-          "image": "images/skills/jquery.png"
-        }, {
-          "id": "3",
-          "type": "javascript",
-          "name": "React",
-          "image": "images/skills/react.png"
-        }, {
-          "id": "4",
-          "type": "javascript",
-          "name": "Vue.js",
-          "image": "images/skills/vue.png"
-        }, {
-          "id": "5",
-          "type": "javascript",
-          "name": "Node.js",
-          "image": "images/skills/node.png"
-        }],
         databases: [{
           "id": "1",
           "type": "database",
@@ -361,7 +381,7 @@
         }, {
           "id": "2",
           "type": "mobile",
-          "name": "iPhone",
+          "name": "iOS",
           "image": "images/skills/iphone.png"
         }],
         newProjects: [],
@@ -378,7 +398,7 @@
                 "text": "Quizzing platform with gamification elements such as achievements and competition through a leaderboard."
               },
               {
-                "text": "Was hosted on Azure using a Ubuntu VM."
+                "text": "Previously hosted on Azure using a Ubuntu VM."
               }
             ],
             "unorderedList": [{
