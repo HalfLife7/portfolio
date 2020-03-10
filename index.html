@@ -5,6 +5,17 @@
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
   <title>David Nguyen's Portfolio</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160172983-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-160172983-1');
+  </script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
@@ -346,6 +357,12 @@
             "type": "webTechnology",
             "name": "Selenium",
             "image": "images/skills/selenium.png"
+          },
+          {
+            "id": "10",
+            "type": "webTechnology",
+            "name": "Redis",
+            "image": "images/skills/redis.png"
           }
         ],
         databases: [{
@@ -488,8 +505,8 @@
             "name": "Doorbell Surveillance",
             "subtitle": "Raspberry Pi",
             "paragraphs": [{
-              "text": "Uses Rasbian OS with code written in Python. See details on github."
-              },{
+              "text": "Uses Rasbian OS with code written in Python."
+            }, {
               "text": "Features:"
             }],
             "unorderedList": [{
@@ -593,9 +610,9 @@
             "colour": "indigo",
             "subtitle": "Vue.js",
             "paragraphs": [{
-              "text" : "My portfolio website was built using Vue.js and Vuetify with responsive design in mind."
+              "text": "This portfolio website was built using Vue.js and Vuetify with responsive design in mind."
             }, {
-              "text" : "Images used are attribution free from unsplash.com and pexels.com."
+              "text": "Images used are attribution free from unsplash.com and pexels.com."
             }],
             "unorderedList": [{
               "text": "Frontend: HTML5, CSS3, Vue.js, Vuetify"
