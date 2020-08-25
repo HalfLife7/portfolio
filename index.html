@@ -3,6 +3,7 @@
 
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <title>David Nguyen's Portfolio</title>
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -11,13 +12,10 @@
   <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
-  <link rel="stylesheet" href="css/styles.min.css" />
   <style>
     .v-card__title {
       word-break: normal;
@@ -32,7 +30,7 @@
 <body>
   <div v-cloak id="app">
     <v-app>
-      <v-content>
+      <v-main>
         <!--home-->
         <v-container fluid py-0 px-0>
           <v-container fluid fill-height py-0 px-0 align-items>
@@ -46,7 +44,9 @@
                         <v-card-title class="justify-center">
                           <div class="title font-weight-bold">Hi, I'm David!</div>
                         </v-card-title>
-                        <v-btn dark small @click="$vuetify.goTo('#skills', 'easeInQuad')">See More</v-btn>
+                        <v-btn dark small @click="$vuetify.goTo('#skills', 'easeInQuad')">
+                          See More
+                        </v-btn>
                       </v-card>
                     </v-col>
                   </v-row>
@@ -164,12 +164,12 @@
           </v-row>
         </v-container>
         <!--contact-->
-      </v-content>
+      </v-main>
       <v-footer padless width="100vw">
         <v-card flat tile class="black lighten-1 white--text text-center" width="100vw">
           <v-card-text>
-            <v-btn v-for="item in footer" :key="item.id" class="mx-4 white--text" :href="item.link" target="_blank"
-              icon>
+            <v-btn v-bind:name="item.name" v-bind:name="item.name" v-for="item in footer" :key="item.id"
+              class="mx-4 white--text" :href="item.link" target="_blank" icon>
               <v-icon size="24px">{{ item.tag }}</v-icon>
             </v-btn>
           </v-card-text>
@@ -187,7 +187,9 @@
       </v-footer>
     </v-app>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.2.15/vuetify.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script>
     Vue.component('footer')
     Vue.component('skill-card', {
@@ -222,7 +224,8 @@
               Source
             </v-btn>
 
-            <v-btn v-if="project.document" :color="project.colour" text :href="project.document" target="_blank">
+            <v-btn v-if="project.document" :color="project.colour" text :href="project.document"
+              target="_blank">
               Document
             </v-btn>
 
@@ -230,7 +233,8 @@
               Live
             </v-btn>
 
-            <v-btn v-if="project.video" :color="project.colourLight" text :href="project.video" target="_blank">
+            <v-btn v-if="project.video" :color="project.colourLight" text :href="project.video"
+              target="_blank">
               Video
             </v-btn>
 
@@ -697,11 +701,13 @@
         footer: [{
             "id": "1",
             "link": "https://www.linkedin.com/in/nguyendavid3322/",
+            "name": "Linkedin",
             "tag": "fab fa-linkedin"
           },
           {
             "id": "2",
             "link": "https://github.com/HalfLife7",
+            "name": "Github",
             "tag": "fab fa-github"
           }
         ]
