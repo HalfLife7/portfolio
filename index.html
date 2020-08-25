@@ -187,8 +187,8 @@
       </v-footer>
     </v-app>
   </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script>
     Vue.component('footer')
@@ -220,27 +220,29 @@
           </v-card-subtitle>
 
           <v-card-actions>
-            <v-btn v-if="project.github" :color="project.colourDark" :href="project.github" target="_blank" text>
+            <v-btn rel="noreferrer" v-if="project.github" :color="project.colourDark" :href="project.github"
+              target="_blank" text>
               Source
             </v-btn>
 
-            <v-btn v-if="project.document" :color="project.colour" text :href="project.document"
+            <v-btn rel="noreferrer" v-if="project.document" :color="project.colour" text :href="project.document"
               target="_blank">
               Document
             </v-btn>
 
-            <v-btn v-if="project.live" :color="project.colour" text :href="project.live" target="_blank">
+            <v-btn rel="noreferrer" v-if="project.live" :color="project.colour" text :href="project.live"
+              target="_blank">
               Live
             </v-btn>
 
-            <v-btn v-if="project.video" :color="project.colourLight" text :href="project.video"
+            <v-btn rel="noreferrer" v-if="project.video" :color="project.colourLight" text :href="project.video"
               target="_blank">
               Video
             </v-btn>
 
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="project.show = !project.show">
+            <v-btn rel="noreferrer" icon @click="project.show = !project.show">
               <v-icon>{{ project.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
             </v-btn>
           </v-card-actions>
