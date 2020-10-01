@@ -1,200 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <title>David Nguyen's Portfolio</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      rel="stylesheet"
+    />
+    <style>
+      .v-card__title {
+        word-break: normal;
+      }
 
-<head>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <title>David Nguyen's Portfolio</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-  <style>
-    .v-card__title {
-      word-break: normal;
-    }
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
 
-    [v-cloak] {
-      display: none;
-    }
-  </style>
-</head>
+  <body>
+    <div v-cloak id="app">
+      <v-app>
+        <v-main>
+          <!--home-->
+          <v-container fluid py-0 px-0>
+            <v-container fluid fill-height py-0 px-0 align-items>
+              <v-row no-gutters>
+                <v-col cols="12">
+                  <v-img
+                    src="images/backgrounds/city.jpg"
+                    id="parallax"
+                    style="max-width: 100%; height: 100vh; overflow: hidden"
+                  >
+                    <v-row
+                      class="flex align-center justify-center"
+                      style="height: 100vh"
+                    >
+                      <v-col
+                        class="col-xs-10 col-sm-6 col-md-5 col-lg-2 text-center"
+                        style="margin: 5%"
+                      >
+                        <v-card class="pa-5">
+                          <v-card-title class="justify-center">
+                            <div class="title font-weight-bold">
+                              Hi, I'm David!
+                            </div>
+                          </v-card-title>
+                          <v-btn
+                            dark
+                            small
+                            @click="$vuetify.goTo('#skills', 'easeInQuad')"
+                          >
+                            See More
+                          </v-btn>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-img>
+                </v-col>
+              </v-row>
+            </v-container>
+            <v-container id="skills" py-0 px-0>
+              <!--about / skills-->
 
-<body>
-  <div v-cloak id="app">
-    <v-app>
-      <v-main>
-        <!--home-->
-        <v-container fluid py-0 px-0>
-          <v-container fluid fill-height py-0 px-0 align-items>
-            <v-row no-gutters>
-              <v-col cols="12">
-                <v-img src="images/backgrounds/city.jpg" id="parallax"
-                  style="max-width: 100%; height: 100vh; overflow: hidden;">
-                  <v-row class="flex align-center justify-center" style="height: 100vh;">
-                    <v-col class="col-xs-10 col-sm-6 col-md-5 col-lg-2 text-center" style="margin: 5%;">
-                      <v-card class="pa-5">
-                        <v-card-title class="justify-center">
-                          <div class="title font-weight-bold">Hi, I'm David!</div>
-                        </v-card-title>
-                        <v-btn dark small @click="$vuetify.goTo('#skills', 'easeInQuad')">
-                          See More
-                        </v-btn>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </v-img>
+              <v-row class="justify-center no-gutters">
+                <v-col class="col-md-10 col-lg-8 text-center my-5">
+                  <v-card dark>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div>
+                        <h3 id="about" class="display-1 font-weight-bold mb-0">
+                          About
+                        </h3>
+                      </div>
+                    </v-card-title>
+                    <v-card-text>
+                      <p class="body-1">
+                        I’m a new software dev grad that’s fascinated by all
+                        forms of design – whether it’s architecture, urban
+                        planning or game design.
+                      </p>
+                      <p class="body-1">
+                        Always looking to learn new technologies and solve
+                        challenging problems.
+                      </p>
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+                <v-row class="justify-center no-gutters">
+                  <v-col
+                    cols="9"
+                    class="col-md-10 col-lg-8 col-xl-5 text-center ma-5"
+                  >
+                    <v-card>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div>
+                          <h3 class="headline mb-0">Programming Languages</h3>
+                        </div>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-row class="justify-center">
+                          <skill-card
+                            v-for="skill in languages"
+                            v-bind:key="skill.id"
+                            v-bind:skill="skill"
+                          >
+                          </skill-card>
+                        </v-row>
+                      </v-card-text>
+                    </v-card>
+                  </v-col>
+                  <v-col
+                    cols="9"
+                    class="col-md-10 col-lg-8 col-xl-5 text-center ma-5"
+                  >
+                    <v-card>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div>
+                          <h3 class="headline mb-0">Web Technologies</h3>
+                        </div>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-row class="justify-center">
+                          <skill-card
+                            v-for="skill in webTechnology"
+                            v-bind:key="skill.id"
+                            v-bind:skill="skill"
+                          >
+                          </skill-card>
+                        </v-row>
+                      </v-card-text>
+                    </v-card>
+                  </v-col>
+                  <v-col
+                    cols="9"
+                    class="col-md-10 col-lg-8 col-xl-5 text-center ma-5"
+                  >
+                    <v-card>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div>
+                          <h3 class="headline mb-0">Database Technologies</h3>
+                        </div>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-row class="justify-center">
+                          <skill-card
+                            v-for="skill in databases"
+                            v-bind:key="skill.id"
+                            v-bind:skill="skill"
+                          >
+                          </skill-card>
+                        </v-row>
+                      </v-card-text>
+                    </v-card>
+                  </v-col>
+                  <v-col
+                    cols="9"
+                    class="col-md-10 col-lg-8 col-xl-5 text-center ma-5"
+                  >
+                    <v-card>
+                      <v-card-title primary-title class="layout justify-center">
+                        <div>
+                          <h3 class="headline mb-0">Mobile Development</h3>
+                        </div>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-row class="justify-center">
+                          <skill-card
+                            v-for="skill in mobile"
+                            v-bind:key="skill.id"
+                            v-bind:skill="skill"
+                          >
+                          </skill-card>
+                        </v-row>
+                      </v-card-text>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-row>
+            </v-container>
+          </v-container>
+          <v-parallax src="images/backgrounds/rainy.jpg" height="300">
+            <v-row class="justify-center">
+              <v-col class="text-center">
+                <v-icon
+                  @click="$vuetify.goTo('#projects', 'easeInQuad')"
+                  size="24px"
+                  >fa-chevron-circle-down</v-icon
+                >
               </v-col>
             </v-row>
-          </v-container>
-          <v-container id="skills" py-0 px-0>
-            <!--about / skills-->
-
-            <v-row class="justify-center no-gutters">
+          </v-parallax>
+          <!--portfolio-->
+          <v-container id="projects" py-5 my-5>
+            <v-row class="justify-center">
               <v-col class="col-md-10 col-lg-8 text-center my-5">
                 <v-card dark>
                   <v-card-title primary-title class="layout justify-center">
                     <div>
-                      <h3 id="about" class="display-1 font-weight-bold mb-0">About</h3>
+                      <h3 id="about" class="display-1 font-weight-bold mb-0">
+                        Projects
+                      </h3>
                     </div>
                   </v-card-title>
-                  <v-card-text>
-                    <p class="body-1">I’m a new software dev grad that’s
-                      fascinated by all forms of
-                      design – whether
-                      it’s
-                      architecture, urban planning or game design.</p>
-                    <p class="body-1">Always looking to learn new technologies and solve
-                      challenging problems.</p>
-                  </v-card-text>
                 </v-card>
               </v-col>
-              <v-row class="justify-center no-gutters">
-                <v-col cols="9" class="col-md-10 col-lg-8 col-xl-5 text-center ma-5">
-                  <v-card>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div>
-                        <h3 class="headline mb-0">Programming Languages</h3>
-                      </div>
-                    </v-card-title>
-                    <v-row class="justify-center">
-                      <skill-card v-for="skill in languages" v-bind:key="skill.id" v-bind:skill="skill">
-                      </skill-card>
-                    </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-                <v-col cols="9" class="col-md-10 col-lg-8 col-xl-5 text-center ma-5">
-                  <v-card>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div>
-                        <h3 class="headline mb-0">Web Technologies</h3>
-                      </div>
-                    </v-card-title>
-                    <v-row class="justify-center">
-                      <skill-card v-for="skill in webTechnology" v-bind:key="skill.id" v-bind:skill="skill">
-                      </skill-card>
-                    </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-                <v-col cols="9" class="col-md-10 col-lg-8 col-xl-5 text-center ma-5">
-                  <v-card>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div>
-                        <h3 class="headline mb-0">Database Technologies</h3>
-                      </div>
-                    </v-card-title>
-                    <v-row class="justify-center">
-                      <skill-card v-for="skill in databases" v-bind:key="skill.id" v-bind:skill="skill">
-                      </skill-card>
-                    </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-                <v-col cols="9" class="col-md-10 col-lg-8 col-xl-5 text-center ma-5">
-                  <v-card>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div>
-                        <h3 class="headline mb-0">Mobile Development</h3>
-                      </div>
-                    </v-card-title>
-                    <v-row class="justify-center">
-                      <skill-card v-for="skill in mobile" v-bind:key="skill.id" v-bind:skill="skill">
-                      </skill-card>
-                    </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-              </v-row>
+            </v-row>
+            <v-row class="justify-center">
+              <project-card
+                v-for="project in newProjects.slice().reverse()"
+                v-bind:key="project.id"
+                v-bind:project="project"
+              >
+              </project-card>
             </v-row>
           </v-container>
-        </v-container>
-        <v-parallax src="images/backgrounds/rainy.jpg" height="300">
-          <v-row class="justify-center">
-            <v-col class="text-center">
-              <v-icon @click="$vuetify.goTo('#projects', 'easeInQuad')" size="24px">fa-chevron-circle-down</v-icon>
-            </v-col>
-          </v-row>
-        </v-parallax>
-        <!--portfolio-->
-        <v-container id="projects" py-5 my-5>
-          <v-row class="justify-center">
-            <v-col class="col-md-10 col-lg-8 text-center my-5">
-              <v-card dark>
-                <v-card-title primary-title class="layout justify-center">
-                  <div>
-                    <h3 id="about" class="display-1 font-weight-bold mb-0">Projects</h3>
-                  </div>
-                </v-card-title>
-              </v-card>
-            </v-col>
-          </v-row>
-          <v-row class="justify-center">
-            <project-card v-for="project in newProjects.slice().reverse()" v-bind:key="project.id"
-              v-bind:project="project">
-            </project-card>
-          </v-row>
-        </v-container>
-        <!--contact-->
-      </v-main>
-      <v-footer padless width="100vw">
-        <v-card flat tile class="black lighten-1 white--text text-center" width="100vw">
-          <v-card-text>
-            <v-btn v-bind:name="item.name" v-bind:name="item.name" v-for="item in footer" :key="item.id"
-              class="mx-4 white--text" :href="item.link" target="_blank" icon>
-              <v-icon size="24px">{{ item.tag }}</v-icon>
-            </v-btn>
-          </v-card-text>
+          <!--contact-->
+        </v-main>
+        <v-footer padless width="100vw">
+          <v-card
+            flat
+            tile
+            class="black lighten-1 white--text text-center"
+            width="100vw"
+          >
+            <v-card-text>
+              <v-btn
+                v-bind:name="item.name"
+                v-bind:name="item.name"
+                v-for="item in footer"
+                :key="item.id"
+                class="mx-4 white--text"
+                :href="item.link"
+                target="_blank"
+                icon
+              >
+                <v-icon size="24px">{{ item.tag }}</v-icon>
+              </v-btn>
+            </v-card-text>
 
-          <!-- <v-card-text class="white--text pt-0">
+            <!-- <v-card-text class="white--text pt-0">
               
             </v-card-text>
       
             <v-divider></v-divider> -->
 
-          <v-card-text class="white--text">
-            {{ new Date().getFullYear() }} — <strong>David Nguyen</strong>
-          </v-card-text>
-        </v-card>
-      </v-footer>
-    </v-app>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-  <script>
-    Vue.component('footer')
-    Vue.component('skill-card', {
-      props: ['skill'],
-      template: `
+            <v-card-text class="white--text">
+              {{ new Date().getFullYear() }} — <strong>David Nguyen</strong>
+            </v-card-text>
+          </v-card>
+        </v-footer>
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      Vue.component("footer");
+      Vue.component("skill-card", {
+        props: ["skill"],
+        template: `
       <v-col cols="4" class="col-sm-4 col-md-3 col-lg-2 text-center">
         <v-card flat class="mx-auto" max-width="400">
           <v-img class="white--text align-end" :src="skill.image">
@@ -202,12 +303,12 @@
           <v-card-title class="justify-center">{{skill.name}}</v-card-title>
         </v-card>
       </v-col>
-      `
-    })
+      `,
+      });
 
-    Vue.component('project-card', {
-      props: ['project'],
-      template: `
+      Vue.component("project-card", {
+        props: ["project"],
+        template: `
       <v-col class="col-md-10 col-lg-5 col-xl-3 ma-5">
         <v-card class="mx-auto">
           <v-img :src="project.image" height="200px"></v-img>
@@ -267,455 +368,546 @@
           </v-expand-transition>
         </v-card>
       </v-col>
-      `
-    });
+      `,
+      });
 
-    new Vue({
-      el: "#app",
-      vuetify: new Vuetify(),
-      // bugfix - all project cards were open by default instead of closed
-      // https://codepen.io/typerory/pen/WzmvyV
-      mounted() {
-        this.addProjects()
-      },
-      methods: {
-        addProjects() {
-          this.newProjects = this.projects.map(projects => ({
-            ...projects,
-            show: false
-          }))
-        }
-      },
-      data: () => ({
-        languages: [{
-            "id": "1",
-            "type": "language",
-            "name": "Java",
-            "image": "images/skills/java.png"
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        // bugfix - all project cards were open by default instead of closed
+        // https://codepen.io/typerory/pen/WzmvyV
+        mounted() {
+          this.addProjects();
+        },
+        methods: {
+          addProjects() {
+            this.newProjects = this.projects.map((projects) => ({
+              ...projects,
+              show: false,
+            }));
           },
-          {
-            "id": "2",
-            "type": "language",
-            "name": "Python",
-            "image": "images/skills/python.png"
-          }, {
-            "id": "3",
-            "type": "language",
-            "name": "C#",
-            "image": "images/skills/csharp.png"
-          },
-          // {
-          //   "id": "4",
-          //   "type": "language",
-          //   "name": "PHP",
-          //   "image": "images/skills/php.png"
-          // },
-          {
-            "id": "5",
-            "type": "language",
-            "name": "Javascript",
-            "image": "images/skills/javascript.png"
-          }
-        ],
-        webTechnology: [{
-            "id": "1",
-            "type": "webTechnology",
-            "name": "jQuery",
-            "image": "images/skills/jquery.png"
-          },
-          // {
-          //   "id": "2",
-          //   "type": "webTechnology",
-          //   "name": "React",
-          //   "image": "images/skills/react.png"
-          // }, 
-          {
-            "id": "3",
-            "type": "webTechnology",
-            "name": "Vue.js",
-            "image": "images/skills/vue.png"
-          },
-          {
-            "id": "4",
-            "type": "webTechnology",
-            "name": "Node.js",
-            "image": "images/skills/node.png"
-          },
-          {
-            "id": "5",
-            "type": "webTechnology",
-            "name": "HTML5",
-            "image": "images/skills/html5.png"
-          },
-          {
-            "id": "6",
-            "type": "webTechnology",
-            "name": "CSS3",
-            "image": "images/skills/css3.png"
-          },
-          // {
-          //   "id": "7",
-          //   "type": "webTechnology",
-          //   "name": "Socket.io",
-          //   "image": "images/skills/socketio.png"
-          // },
-          // {
-          //   "id": "8",
-          //   "type": "webTechnology",
-          //   "name": "Stripe",
-          //   "image": "images/skills/stripe.png"
-          // },
-          // {
-          //   "id": "9",
-          //   "type": "webTechnology",
-          //   "name": "Selenium",
-          //   "image": "images/skills/selenium.png"
-          // },
-          // {
-          //   "id": "10",
-          //   "type": "webTechnology",
-          //   "name": "Redis",
-          //   "image": "images/skills/redis.png"
-          // }
-        ],
-        databases: [{
-            "id": "1",
-            "type": "database",
-            "name": "MySQL",
-            "image": "images/skills/mysql.png"
-          },
-          // {
-          //   "id": "2",
-          //   "type": "database",
-          //   "name": "SQLite",
-          //   "image": "images/skills/sqlite.png"
-          // },
-          // {
-          //   "id": "3",
-          //   "type": "database",
-          //   "name": "MariaDB",
-          //   "image": "images/skills/mariadb.png"
-          // },
-          {
-            "id": "4",
-            "type": "database",
-            "name": "Oracle Database",
-            "image": "images/skills/oracle.png"
-          },
-          {
-            "id": "5",
-            "type": "database",
-            "name": "MSSQL",
-            "image": "images/skills/microsoftsqlserver.png"
-          }
-        ],
-        mobile: [{
-          "id": "1",
-          "type": "mobile",
-          "name": "Android",
-          "image": "images/skills/android.png"
-        }, {
-          "id": "2",
-          "type": "mobile",
-          "name": "iOS",
-          "image": "images/skills/iphone.png"
-        }],
-        newProjects: [],
-        projects: [{
-            "id": "1",
-            "show": "false",
-            "github": "https://github.com/HalfLife7/portfolio",
-            "image": "images/projects/portfolio.jpg",
-            "name": "Portfolio",
-            "colour": "indigo",
-            "colourLight": "indigo lighten-1",
-            "colourDark": "indigo darken-3",
-            "subtitle": "Vue.js",
-            "paragraphs": [{
-              "text": "This portfolio website was built using Vue.js and Vuetify with responsive design in mind."
-            }, {
-              "text": "Images used are attribution free from unsplash.com and pexels.com."
-            }],
-            "unorderedList": [{
-              "text": "Frontend: HTML5, CSS3, Vue.js, Vuetify"
-            }]
-          },
-          {
-            "id": "2",
-            "github": "https://github.com/HalfLife7/hammertown-coffee",
-            "show": "false",
-            "image": "images/projects/coffee.jpg",
-            "colour": "brown",
-            "colourLight": "brown lighten-1",
-            "colourDark": "brown darken-3",
-            "name": "Hammertown Coffee",
-            "subtitle": "Responsive Design Web Application",
-            "video": "https://www.youtube.com/watch?v=zVBBPKoVs4s",
-            "paragraphs": [{
-              "text": "Web application that shows coffee shops in Hamilton with the ability to get information such as store hours, reviews and directions."
-            }],
-            "unorderedList": [{
-                "text": "Front-end: HTML5, CSS3, Javascript, jQuery, Bootstrap"
-              },
-              {
-                "text": "Additional Data: Hamilton Open Data"
-              },
-              {
-                "text": "API: Google Places API"
-              }
-            ],
-          },
-          {
-            "id": "3",
-            "show": "false",
-            "github": "https://github.com/HalfLife7/doorbell-surveillance",
-            "image": "images/projects/cctv.jpg",
-            "colour": "red",
-            "colourLight": "red lighten-1",
-            "colourDark": "red darken-3",
-            "name": "Doorbell Surveillance",
-            "subtitle": "Raspberry Pi",
-            "paragraphs": [{
-              "text": "Uses Rasbian OS with code written in Python."
-            }, {
-              "text": "Features:"
-            }],
-            "unorderedList": [{
-                "text": "Facial Recognition"
-              },
-              {
-                "text": "Motion Detection"
-              },
-              {
-                "text": "E-mail / Text Message Notifications"
-              },
-              {
-                "text": "Live-stream of Camera"
-              },
-              {
-                "text": "LEDs to Indicate Visitor Status"
-              }
-            ]
-          },
-          {
-            "id": "4",
-            "show": "false",
-            "document": "https://drive.google.com/file/d/1idqQO3e9U3HfHJhqQ-nIF_azcQ_isIkO/view?usp=sharing",
-            "image": "images/projects/energymeter.jpg",
-            "colour": "blue",
-            "colourLight": "blue lighten-1",
-            "colourDark": "blue darken-3",
-            "name": "Energy Meter Control Panel",
-            "subtitle": "openHAB",
-            "video": "https://www.youtube.com/watch?v=ffKFiQl7Exk",
-            "paragraphs": [{
-              "text": "Setup and configured OpenHAB control panel with connectivity to ION7650 meter for Mohawk's Energy & Power Innovation Centre."
-            }],
-            "orderedList": [{
-                "text": "Created workflows for adding devices to system"
-              },
-              {
-                "text": "Added database functionality for historical data"
-              },
-              {
-                "text": "Created step-by-step documentation on how to use OpenHAB system"
-              }
-            ],
-            "unorderedList": [{
-                "text": "System: openHAB"
-              },
-              {
-                "text": "Communication Protocol: Modbus"
-              },
-              {
-                "text": "Database: MariaDB"
-              },
-              {
-                "text": "Data Visualisation: Grafana"
-              }
-            ]
-          },
-          {
-            "id": "5",
-            "github": "https://github.com/HalfLife7/quiz-manager",
-            "document": "https://drive.google.com/file/d/17IIYAzdfLE_FMxu92K3xBWVSrPtO4SVE/view?usp=sharing",
-            "show": "false",
-            "image": "images/projects/quiz-manager.jpg",
-            "colour": "purple",
-            "colourLight": "purple lighten-1",
-            "colourDark": "purple darken-3",
-            "name": "Quiz Manager",
-            "subtitle": "Node.js",
-            "video": "https://www.youtube.com/watch?v=expKFJKAPHM",
-            "paragraphs": [{
-                "text": "Quizzing platform with gamification elements such as achievements and competition through a leaderboard."
-              },
-              {
-                "text": "Previously hosted on Azure using an Ubuntu VM."
-              }
-            ],
-            "unorderedList": [{
-                "text": "Front-end: HTML5, CSS3, Javascript, jQuery, Bootstrap"
-              },
-              {
-                "text": "Backend: Node.js, Express.js"
-              },
-              {
-                "text": "Templating: mustache.js"
-              },
-              {
-                "text": "Database: MySQL"
-              },
-              {
-                "text": "Testing: Selenium"
-              }
-            ]
-          },
-          {
-            "id": "6",
-            "github": "https://github.com/HalfLife7/potion-break",
-            "show": "false",
-            "image": "images/projects/potion-break.jpg",
-            "colour": "teal",
-            "colourLight": "teal lighten-1",
-            "colourDark": "teal darken-3",
-            "name": "Potion Break",
-            "subtitle": "Node.js",
-            "paragraphs": [{
-              "text": "Web app that leverages loss aversion to help you take a break from gaming."
-            }],
-            "unorderedList": [{
-                "text": "Front-end: HTML5, CSS3, Javascript, Bulma"
-              },
-              {
-                "text": "Backend: Node.js, Express.js"
-              },
-              {
-                "text": "Templating: mustache.js"
-              },
-              {
-                "text": "Database: Sqlite3"
-              },
-              {
-                "text": "Utilities: axios, passport.js, bluebird.js, bottleneck.js, cron, moment.js"
-              },
-              {
-                "text": "APIs: Stripe, Steam"
-              }
-            ]
-          },
-          {
-            "id": "7",
-            "live": "https://www.qpwh.ca",
-            "show": "false",
-            "image": "images/projects/queens-pizza.jpg",
-            "colour": "orange",
-            "colourLight": "orange lighten-1",
-            "colourDark": "orange darken-3",
-            "name": "Queen's Pizza",
-            "subtitle": "Responsive Website",
-            "paragraphs": [{
-              "text": "Website for local pizza store with a focus on responsive design."
-            }],
-            "unorderedList": [{
-              "text": "Front-end: HTML5, CSS3, Javascript, Bulma"
-            }]
-          }
-          // {
-          //   "id": "6",
-          //   "github": "https://github.com/HalfLife7/tv-show-organizer",
-          //   "show": "false",
-          //   "image": "images/projects/tv-show-organizer.jpg",
-          //   "name": "TV Show Organizer",
-          //   "colour": "orange",
-          //   "subtitle": "Python",
-          //   "paragraphs": [{
-          //     "text": "Python program that organizes your Anime or TV Shows into organized folders."
-          //   }],
-          //   "unorderedList": [{
-          //     "text": "Language: Python"
-          //   }]
-          // },
-          // {
-          //   "id": "7",
-          //   "github": "https://github.com/HalfLife7/machine-learning-fertility-dataset",
-          //   "show": "false",
-          //   "image": "images/projects/machinelearning.jpg",
-          //   "name": "kNN / Decision Tree Analysis",
-          //   "colour": "green",
-          //   "subtitle": "Machine Learning",
-          //   "paragraphs": [{
-          //       "text": "Analysis of Fertility Data Set from UCI Machine Learning Repository using both kNN and Decision Trees."
-          //     },
-          //     {
-          //       "text": "Algorithms were manually coded instead of using scikit-learn's algorithms."
-          //     }
-          //   ],
-          //   "unorderedList": [{
-          //     "text": "Language: Python"
-          //   }]
-          // },
-          // {
-          //   "id": "8",
-          //   "github": "https://github.com/HalfLife7/node-vue-example",
-          //   "show": "false",
-          //   "image": "images/projects/brewery.jpg",
-          //   "name": "Redis Pub/Sub Demo",
-          //   "colour": "cyan",
-          //   "subtitle": "Node.js",
-          //   "paragraphs": [{
-          //     "text": "Program simulates a microbrewery with messages being generated and transmitted through Redis Pub/Sub channels in conjuction with Socket.io."
-          //   }],
-          //   "unorderedList": [{
-          //     "text": "Backend: Node.js"
-          //   }, {
-          //     "text": "Frontend: Vue.js"
-          //   }, {
-          //     "text": "State Management: Vuex"
-          //   }, {
-          //     "text": "Routing: Vue Router"
-          //   }]
-          // },
-          // {
-          //   "id": "9",
-          //   "show": "false",
-          //   "document": "https://drive.google.com/file/d/1XMWG_QGXMtOC1Y6k1-t9zEcMQIgbsrb7/view?usp=sharing",
-          //   "image": "images/projects/magento.jpg",
-          //   "name": "CMS Instructions",
-          //   "colour": "pink",
-          //   "subtitle": "Magento",
-          //   "paragraphs": [{
-          //     "text": "Knowledge transfer documents with step-by-step instructions on updating websites using Magento and solutions to common errors."
-          //   }],
-          //   "unorderedList": [{
-          //     "text": "Content Updates"
-          //   }, {
-          //     "text": "Shop/Product Updates"
-          //   }, {
-          //     "text": "Image Updates"
-          //   }, {
-          //     "text": "Backend Updates - Google Analytics"
-          //   }]
-          // }, 
-
-
-        ],
-        footer: [{
-            "id": "1",
-            "link": "https://www.linkedin.com/in/nguyendavid3322/",
-            "name": "Linkedin",
-            "tag": "fab fa-linkedin"
-          },
-          {
-            "id": "2",
-            "link": "https://github.com/HalfLife7",
-            "name": "Github",
-            "tag": "fab fa-github"
-          }
-        ]
-      })
-    });
-  </script>
-</body>
-
+        },
+        data: () => ({
+          languages: [
+            {
+              id: "1",
+              type: "language",
+              name: "Java",
+              image: "images/skills/java.png",
+            },
+            {
+              id: "2",
+              type: "language",
+              name: "Python",
+              image: "images/skills/python.png",
+            },
+            {
+              id: "3",
+              type: "language",
+              name: "C#",
+              image: "images/skills/csharp.png",
+            },
+            // {
+            //   "id": "4",
+            //   "type": "language",
+            //   "name": "PHP",
+            //   "image": "images/skills/php.png"
+            // },
+            {
+              id: "5",
+              type: "language",
+              name: "Javascript",
+              image: "images/skills/javascript.png",
+            },
+          ],
+          webTechnology: [
+            {
+              id: "1",
+              type: "webTechnology",
+              name: "jQuery",
+              image: "images/skills/jquery.png",
+            },
+            // {
+            //   "id": "2",
+            //   "type": "webTechnology",
+            //   "name": "React",
+            //   "image": "images/skills/react.png"
+            // },
+            {
+              id: "3",
+              type: "webTechnology",
+              name: "Vue.js",
+              image: "images/skills/vue.png",
+            },
+            {
+              id: "4",
+              type: "webTechnology",
+              name: "Node.js",
+              image: "images/skills/node.png",
+            },
+            {
+              id: "5",
+              type: "webTechnology",
+              name: "HTML5",
+              image: "images/skills/html5.png",
+            },
+            {
+              id: "6",
+              type: "webTechnology",
+              name: "CSS3",
+              image: "images/skills/css3.png",
+            },
+            // {
+            //   "id": "7",
+            //   "type": "webTechnology",
+            //   "name": "Socket.io",
+            //   "image": "images/skills/socketio.png"
+            // },
+            // {
+            //   "id": "8",
+            //   "type": "webTechnology",
+            //   "name": "Stripe",
+            //   "image": "images/skills/stripe.png"
+            // },
+            // {
+            //   "id": "9",
+            //   "type": "webTechnology",
+            //   "name": "Selenium",
+            //   "image": "images/skills/selenium.png"
+            // },
+            // {
+            //   "id": "10",
+            //   "type": "webTechnology",
+            //   "name": "Redis",
+            //   "image": "images/skills/redis.png"
+            // }
+          ],
+          databases: [
+            {
+              id: "1",
+              type: "database",
+              name: "MySQL",
+              image: "images/skills/mysql.png",
+            },
+            // {
+            //   "id": "2",
+            //   "type": "database",
+            //   "name": "SQLite",
+            //   "image": "images/skills/sqlite.png"
+            // },
+            // {
+            //   "id": "3",
+            //   "type": "database",
+            //   "name": "MariaDB",
+            //   "image": "images/skills/mariadb.png"
+            // },
+            {
+              id: "4",
+              type: "database",
+              name: "Oracle Database",
+              image: "images/skills/oracle.png",
+            },
+            {
+              id: "5",
+              type: "database",
+              name: "MSSQL",
+              image: "images/skills/microsoftsqlserver.png",
+            },
+            {
+              id: "5",
+              type: "database",
+              name: "PostgreSQL",
+              image: "images/skills/postgres.png",
+            },
+          ],
+          mobile: [
+            {
+              id: "1",
+              type: "mobile",
+              name: "Android",
+              image: "images/skills/android.png",
+            },
+            {
+              id: "2",
+              type: "mobile",
+              name: "iOS",
+              image: "images/skills/iphone.png",
+            },
+          ],
+          newProjects: [],
+          projects: [
+            {
+              id: "1",
+              show: "false",
+              github: "https://github.com/HalfLife7/portfolio",
+              image: "images/projects/portfolio.jpg",
+              name: "Portfolio",
+              colour: "indigo",
+              colourLight: "indigo lighten-1",
+              colourDark: "indigo darken-3",
+              subtitle: "Vue.js",
+              paragraphs: [
+                {
+                  text:
+                    "This portfolio website was built using Vue.js and Vuetify with responsive design in mind.",
+                },
+                {
+                  text:
+                    "Images used are attribution free from unsplash.com and pexels.com.",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Frontend: HTML5, CSS3, Vue.js, Vuetify",
+                },
+              ],
+            },
+            {
+              id: "2",
+              github: "https://github.com/HalfLife7/hammertown-coffee",
+              show: "false",
+              image: "images/projects/coffee.jpg",
+              colour: "brown",
+              colourLight: "brown lighten-1",
+              colourDark: "brown darken-3",
+              name: "Hammertown Coffee",
+              subtitle: "Responsive Design Web Application",
+              video: "https://www.youtube.com/watch?v=zVBBPKoVs4s",
+              paragraphs: [
+                {
+                  text:
+                    "Web application that shows coffee shops in Hamilton with the ability to get information such as store hours, reviews and directions.",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Front-end: HTML5, CSS3, Javascript, jQuery, Bootstrap",
+                },
+                {
+                  text: "Additional Data: Hamilton Open Data",
+                },
+                {
+                  text: "API: Google Places API",
+                },
+              ],
+            },
+            {
+              id: "3",
+              show: "false",
+              github: "https://github.com/HalfLife7/doorbell-surveillance",
+              image: "images/projects/cctv.jpg",
+              colour: "red",
+              colourLight: "red lighten-1",
+              colourDark: "red darken-3",
+              name: "Doorbell Surveillance",
+              subtitle: "Raspberry Pi",
+              paragraphs: [
+                {
+                  text: "Uses Rasbian OS with code written in Python.",
+                },
+                {
+                  text: "Features:",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Facial Recognition",
+                },
+                {
+                  text: "Motion Detection",
+                },
+                {
+                  text: "E-mail / Text Message Notifications",
+                },
+                {
+                  text: "Live-stream of Camera",
+                },
+                {
+                  text: "LEDs to Indicate Visitor Status",
+                },
+              ],
+            },
+            {
+              id: "4",
+              show: "false",
+              document:
+                "https://drive.google.com/file/d/1idqQO3e9U3HfHJhqQ-nIF_azcQ_isIkO/view?usp=sharing",
+              image: "images/projects/energymeter.jpg",
+              colour: "green",
+              colourLight: "green lighten-1",
+              colourDark: "green darken-3",
+              name: "Energy Meter Control Panel",
+              subtitle: "openHAB",
+              video: "https://www.youtube.com/watch?v=ffKFiQl7Exk",
+              paragraphs: [
+                {
+                  text:
+                    "Setup and configured OpenHAB control panel with connectivity to ION7650 meter for Mohawk's Energy & Power Innovation Centre.",
+                },
+              ],
+              orderedList: [
+                {
+                  text: "Created workflows for adding devices to system",
+                },
+                {
+                  text: "Added database functionality for historical data",
+                },
+                {
+                  text:
+                    "Created step-by-step documentation on how to use OpenHAB system",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "System: openHAB",
+                },
+                {
+                  text: "Communication Protocol: Modbus",
+                },
+                {
+                  text: "Database: MariaDB",
+                },
+                {
+                  text: "Data Visualisation: Grafana",
+                },
+              ],
+            },
+            {
+              id: "5",
+              github: "https://github.com/HalfLife7/quiz-manager",
+              document:
+                "https://drive.google.com/file/d/17IIYAzdfLE_FMxu92K3xBWVSrPtO4SVE/view?usp=sharing",
+              show: "false",
+              image: "images/projects/quiz-manager.jpg",
+              colour: "purple",
+              colourLight: "purple lighten-1",
+              colourDark: "purple darken-3",
+              name: "Quiz Manager",
+              subtitle: "Node.js",
+              video: "https://www.youtube.com/watch?v=expKFJKAPHM",
+              paragraphs: [
+                {
+                  text:
+                    "Quizzing platform with gamification elements such as achievements and competition through a leaderboard.",
+                },
+                {
+                  text: "Previously hosted on Azure using an Ubuntu VM.",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Front-end: HTML5, CSS3, Javascript, jQuery, Bootstrap",
+                },
+                {
+                  text: "Backend: Node.js, Express.js",
+                },
+                {
+                  text: "Templating: mustache.js",
+                },
+                {
+                  text: "Database: MySQL",
+                },
+                {
+                  text: "Testing: Selenium",
+                },
+              ],
+            },
+            {
+              id: "6",
+              live: "https://potion-break.herokuapp.com/",
+              github: "https://github.com/HalfLife7/potion-break",
+              show: "false",
+              image: "images/projects/potion-break.jpg",
+              colour: "teal",
+              colourLight: "teal lighten-1",
+              colourDark: "teal darken-3",
+              name: "Potion Break",
+              subtitle: "Node.js",
+              paragraphs: [
+                {
+                  text:
+                    "Web app that leverages loss aversion to help you take a break from gaming.",
+                },
+                {
+                  text: "Hosted on Heroku.",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Front-end: HTML5, CSS3, Javascript, Bulma",
+                },
+                {
+                  text: "Backend: Node.js, Express.js",
+                },
+                {
+                  text: "Templating: mustache.js",
+                },
+                {
+                  text: "Database: Knex.js, Objection.js, PostgreSQL",
+                },
+                {
+                  text:
+                    "Utilities: axios, passport.js, bottleneck.js, cron, date-fns",
+                },
+                {
+                  text: "APIs: Stripe, Steam",
+                },
+              ],
+            },
+            {
+              id: "7",
+              live: "https://www.queensonking.ca/",
+              show: "false",
+              image: "images/projects/queens-pizza.jpg",
+              colour: "orange",
+              colourLight: "orange lighten-1",
+              colourDark: "orange darken-3",
+              name: "Queen's Pizza",
+              subtitle: "Responsive Website",
+              paragraphs: [
+                {
+                  text:
+                    "Website for local pizza store with a focus on responsive design.",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Front-end: HTML5, CSS3, Javascript, Bulma",
+                },
+              ],
+            },
+            {
+              id: "8",
+              live: "https://vgm-list.netlify.app/",
+              github: "https://github.com/HalfLife7/vgm-list",
+              show: "false",
+              image: "images/projects/vgm-list.jpg",
+              colour: "blue",
+              colourLight: "blue lighten-1",
+              colourDark: "blue darken-3",
+              name: "VGM List",
+              subtitle: "Vue.js / Node.js",
+              paragraphs: [
+                {
+                  text:
+                    "Web app that is a database for Video Game Music (VGM). Find your favourite boss fight theme from thousands of Original Sound Tracks (OST).",
+                },
+                {
+                  text:
+                    "Front-end hosted on Netlify and back-end hosted on Heroku. Database may be slow to start since Heroku's free dynos sleep after a small period of inactivity.",
+                },
+              ],
+              unorderedList: [
+                {
+                  text: "Front-end: Vue.js, Tailwind CSS",
+                },
+                {
+                  text: "Backend: Node.js, Express.js",
+                },
+                {
+                  text: "Database: Knex.js, Objection.js, PostgreSQL",
+                },
+                {
+                  text: "Utilities: axios, cron, moment.js",
+                },
+                {
+                  text: "APIs: IGDB, VGMdb",
+                },
+              ],
+            },
+            // {
+            //   "id": "6",
+            //   "github": "https://github.com/HalfLife7/tv-show-organizer",
+            //   "show": "false",
+            //   "image": "images/projects/tv-show-organizer.jpg",
+            //   "name": "TV Show Organizer",
+            //   "colour": "orange",
+            //   "subtitle": "Python",
+            //   "paragraphs": [{
+            //     "text": "Python program that organizes your Anime or TV Shows into organized folders."
+            //   }],
+            //   "unorderedList": [{
+            //     "text": "Language: Python"
+            //   }]
+            // },
+            // {
+            //   "id": "7",
+            //   "github": "https://github.com/HalfLife7/machine-learning-fertility-dataset",
+            //   "show": "false",
+            //   "image": "images/projects/machinelearning.jpg",
+            //   "name": "kNN / Decision Tree Analysis",
+            //   "colour": "green",
+            //   "subtitle": "Machine Learning",
+            //   "paragraphs": [{
+            //       "text": "Analysis of Fertility Data Set from UCI Machine Learning Repository using both kNN and Decision Trees."
+            //     },
+            //     {
+            //       "text": "Algorithms were manually coded instead of using scikit-learn's algorithms."
+            //     }
+            //   ],
+            //   "unorderedList": [{
+            //     "text": "Language: Python"
+            //   }]
+            // },
+            // {
+            //   "id": "8",
+            //   "github": "https://github.com/HalfLife7/node-vue-example",
+            //   "show": "false",
+            //   "image": "images/projects/brewery.jpg",
+            //   "name": "Redis Pub/Sub Demo",
+            //   "colour": "cyan",
+            //   "subtitle": "Node.js",
+            //   "paragraphs": [{
+            //     "text": "Program simulates a microbrewery with messages being generated and transmitted through Redis Pub/Sub channels in conjuction with Socket.io."
+            //   }],
+            //   "unorderedList": [{
+            //     "text": "Backend: Node.js"
+            //   }, {
+            //     "text": "Frontend: Vue.js"
+            //   }, {
+            //     "text": "State Management: Vuex"
+            //   }, {
+            //     "text": "Routing: Vue Router"
+            //   }]
+            // },
+            // {
+            //   "id": "9",
+            //   "show": "false",
+            //   "document": "https://drive.google.com/file/d/1XMWG_QGXMtOC1Y6k1-t9zEcMQIgbsrb7/view?usp=sharing",
+            //   "image": "images/projects/magento.jpg",
+            //   "name": "CMS Instructions",
+            //   "colour": "pink",
+            //   "subtitle": "Magento",
+            //   "paragraphs": [{
+            //     "text": "Knowledge transfer documents with step-by-step instructions on updating websites using Magento and solutions to common errors."
+            //   }],
+            //   "unorderedList": [{
+            //     "text": "Content Updates"
+            //   }, {
+            //     "text": "Shop/Product Updates"
+            //   }, {
+            //     "text": "Image Updates"
+            //   }, {
+            //     "text": "Backend Updates - Google Analytics"
+            //   }]
+            // },
+          ],
+          footer: [
+            {
+              id: "1",
+              link: "https://www.linkedin.com/in/nguyendavid3322/",
+              name: "Linkedin",
+              tag: "fab fa-linkedin",
+            },
+            {
+              id: "2",
+              link: "https://github.com/HalfLife7",
+              name: "Github",
+              tag: "fab fa-github",
+            },
+          ],
+        }),
+      });
+    </script>
+  </body>
 </html>
